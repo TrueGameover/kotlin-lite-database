@@ -18,7 +18,7 @@ open class DatabaseManager {
 
     fun getSession(): Session {
 
-        return HibernateSessionFactory.sessionFactory.openSession() as Session
+        return HibernateSessionFactory.getSessionFactory().openSession() as Session
     }
 
     fun beginTransaction(session: Session): Transaction {
