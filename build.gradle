@@ -37,3 +37,9 @@ sourceSets {
     main.kotlin.srcDirs += 'src'
 }
 
+task packageSources(type: Jar, dependsOn: 'classes') {
+    from sourceSets.main.allSource
+    classifier = 'sources'
+}
+
+artifacts { archives packageSources }
