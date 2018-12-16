@@ -57,7 +57,6 @@ object HibernateSessionFactory {
 
     fun <T : BaseModel> registerEntityClass(entity: KClass<T>) {
 
-        this.registeredEntities.clear()
         this.registeredEntities.add(entity as KClass<BaseModel>)
     }
 
